@@ -6,12 +6,7 @@ exports.create = (req, res) => {
     res.send({ message: "create handler" });
 };
 
-// exports.findAll = (req, res) => {
 
-//     res.send({ message: "findAll handler" });
-// };
-
-// Retrieve all contacts of a user from the database
 exports.findAll = async(req, res, next) => {
     let documents = [];
 
@@ -31,9 +26,6 @@ exports.findAll = async(req, res, next) => {
     return res.send(documents);
 };
 
-// exports.findOne = (req, res) => {
-//     res.send({ message: "findOne handler" });
-// };
 
 exports.findOne = async (req, res, next) => {
     try{
@@ -53,9 +45,6 @@ exports.findOne = async (req, res, next) => {
     }
 };
 
-// exports.update = (req, res) => {
-//     res.send({ message: "update handler" });
-// };
 
 exports.update = async (req, res, next) => {
     if (Object.keys(req.body).length == 0){
@@ -77,9 +66,7 @@ exports.update = async (req, res, next) => {
 };
 
 
-// exports.delete = (req, res) => {
-//     res.send({ message: "delete handler" });
-// };
+
 
 exports.delete = async (req, res, next) => {
     
